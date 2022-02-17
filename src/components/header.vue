@@ -1,25 +1,43 @@
 <template>
     <div>
-        <input v-model="this.movie" type="text">
-        <button @click="findMovie">VAI</button>
+        <h1>BOOLFLIX</h1>
+        <div>
+            <input v-model="movie" type="text">
+            <button @click="search">VAI</button>
+        </div>
+        
     </div>
     
 </template>
 
 <script>
 export default {
+    name: 'Header',
     data(){
         return{
             movie: '',
         }
-    }
-    // methods:{
-            
-    //     }
+    },
+    methods:{
+            search(){
+                this.$emit('query', this.movie);
+            }
+        }
     }
 
 </script>
 
-<style>
-
+<style scoped lang='scss'>
+    div{
+        height: 60px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+            h1{
+                color: red;
+                font-size: 30px
+            }
+    }
 </style>

@@ -1,23 +1,30 @@
 <template>
   <div id="app">
-    <Header />
+    
     <Main />
   </div>
 </template>
 
 <script>
 import Main from './components/Main';
-import Header from './components/Header';
 
 export default {
   name: 'App',
   components: {
     Main,
-    Header
   }
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    div{
+      min-height: 100vh;
+      background-color: grey;
+    }
 </style>
